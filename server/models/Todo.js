@@ -17,4 +17,4 @@ const Todo = mongoose.model('Todo', {
   },
 });
 
-module.expmorts = { Todo };
+module.exports = { Todo };
