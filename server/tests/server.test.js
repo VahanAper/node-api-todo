@@ -4,8 +4,9 @@ const { ObjectID } = require('mongodb');
 
 const { app } = require('../server');
 const { Todo } = require('../models/Todo');
-const { todos, populateTodos } = require('./seed/seed');
+const { todos, users, populateTodos, populateUsers } = require('./seed/seed');
 
+beforeEach(populateUsers);
 beforeEach(populateTodos);
 
 describe('POST /todos', () => {
